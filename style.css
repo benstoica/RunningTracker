@@ -116,3 +116,17 @@ li {
     border-radius: 50%;
     background: #1C262F;
 }
+
+@media screen and (min-width: 700px) {
+    body {
+        width: 60%;
+    }
+
+    input[type="number"] {
+        width: 40%;
+    }
+
+    svg {
+        max-width: 50%;
+    }
+}
