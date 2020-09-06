@@ -1,5 +1,7 @@
+const goal = 25;
 let entries = [];
 const entriesWrapper = document.querySelector('#entries');
+document.querySelector('#target').innerText = goal;
 
 
 function addNewEntry(newEntry) {
@@ -26,6 +28,11 @@ function calcAvg() {
     document.getElementById('average').innerText = avg;
 }
 
+function weeklyHigh() {
+    const high = Math.max(...entries);
+    document.getElementById('high').innerText = high;
+}
+
 function handleSubmit(e) {
     event.preventDefault();
     const entry = Number(document.querySelector('#entry').value);
@@ -36,6 +43,7 @@ function handleSubmit(e) {
     addNewEntry(entry);
     calcTotal();
     calcAvg();
+    weeklyHigh();
 }
 
 
